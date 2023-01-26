@@ -14,3 +14,7 @@ def consulta_cep(request):
         'res_list': res_list
     }
     return render(request, 'result.html', context)
+
+
+def base(request):
+    return render (request,'base.html')
