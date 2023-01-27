@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 import requests
 
 
@@ -9,12 +9,11 @@ def main_view(request):
 def consulta_cep(request):
     cep = request.POST.get('cep')
     data = requests.get(f'https://viacep.com.br/ws/{cep}/json/').json()
-    res_list = [data['logradouro'], data['bairro'], data['localidade'], data['uf']]
+    res_list = [
+        data['logradouro'], data['bairro'],
+        data['localidade'], data['uf']
+    ]
     context = {
         'res_list': res_list
     }
-    return render(request, 'result.html', context)
-
-
-def base(request):
-    return render (request,'base.html')
+    return render(request, 'index.html', context)
