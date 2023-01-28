@@ -9,32 +9,32 @@
       <input type="text"
              name="cep"
              class="form-control"
-             placeholder="CEP"
+             placeholder="CEP" 
              aria-label="CEP"
              aria-describedby="button-addon2">
       <button class="btn btn-outline-secondary" type="submit">OK</button>
     </div>
   </form>
 
+    <div class="row align-items-start">
+      <div class="col">
+        Logradouro <br>
+        <br>{{res_list.0}} <br>
+      </div>
+      <div class="col">
+        Bairro <br>
+        <br>{{res_list.1}} <br>
+      </div>
+      <div class="col">
+        Localidade <br>
+        <br>{{res_list.2}} <br>
+      </div>
+      <div class="col">
+        UF <br>
+        <br>{{res_list.3}} <br>
+      </div>
+  </div>
+
   
 {% endblock main %}
-{% comment %} <br>
-<div class="container text-center">
-  <div class="row align-items-start">
-    <div class="col">
-      Logradouro <br>
-      <br>{{res_list.0}} <br>
-    </div>
-    <div class="col">
-      Bairro <br>
-      <br>{{res_list.1}} <br>
-    </div>
-    <div class="col">
-      Localidade <br>
-      <br>{{res_list.2}} <br>
-    </div>
-    <div class="col">
-      UF <br>
-      <br>{{res_list.3}} <br>
-    </div>
-</div> {% endcomment %}
+
